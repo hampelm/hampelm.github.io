@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing GDAL on a Debian Stretch Docker instance
-date: '2018-04-02T03:13:00-04:00'
+date: '2019-04-02T03:13:00-04:00'
 ---
 
 I had to get GDAL working in a Docker image with Debian Stretch for circleci. Here's the working dockerfile:

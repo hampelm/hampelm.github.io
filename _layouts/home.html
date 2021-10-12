@@ -15,11 +15,20 @@ layout: default
       {%- for post in site.posts -%}
       <div class="post">
 
+        {%- if post.layout == 'link' -%}
+        <h3>
+          <a class="post-link" href="{{ post.link }}" target="_blank">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- else -%}
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
           </a>
         </h3>
+        {%- endif -%}
+
 
         <h4>
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
@@ -27,6 +36,10 @@ layout: default
         </h4>
 
         {%- if post.title == 'no title' -%}
+          {{post.content}}
+        {%- endif -%}
+
+        {%- if post.layout == 'link' -%}
           {{post.content}}
         {%- endif -%}
       </div>

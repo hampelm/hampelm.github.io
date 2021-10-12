@@ -53,15 +53,16 @@ h1, h3 {
   width: 10rem;
   max-width: 10rem;
   padding: 1rem;
-  background: #7c1d6f;
-  color: #fff;
+  color: #7c1d6f;
+  // color: #fff;
 
   h1 {
     line-height: 1em;
+    margin-bottom: 1rem;
   }
 
   a, a:hover, a:active, a:visited {
-    color: #fff;
+    color: #7c1d6f;
     text-decoration: none;
   }
 }
